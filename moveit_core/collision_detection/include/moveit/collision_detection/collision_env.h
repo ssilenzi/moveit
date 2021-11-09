@@ -156,6 +156,15 @@ public:
                                    const moveit::core::RobotState& state1,
                                    const moveit::core::RobotState& state2) const = 0;
 
+  virtual void checkObjectPairCollision(const CollisionRequest& req, CollisionResult& res,
+                                        const std::string& object1_name, const std::string& object2_name) const
+  {
+    (void)req;
+    (void)res;
+    (void)object1_name;
+    (void)object2_name;
+  }
+
   /** \brief The distance to self-collision given the robot is at state \e state.
       @param req A DistanceRequest object that encapsulates the distance request
       @param res A DistanceResult object that encapsulates the distance result
