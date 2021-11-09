@@ -330,8 +330,8 @@ void CollisionEnvFCL::checkRobotCollisionHelper(const CollisionRequest& req, Col
 void CollisionEnvFCL::checkObjectPairCollision(const CollisionRequest& req, CollisionResult& res,
                                                const std::string& object1_name, const std::string& object2_name) const
 {
-  collision_detection::FCLObject fcl_obj1 = fcl_objs_.at(object1_name);
-  collision_detection::FCLObject fcl_obj2 = fcl_objs_.at(object2_name);
+  FCLObject fcl_obj1 = fcl_objs_.at(object1_name);
+  FCLObject fcl_obj2 = fcl_objs_.at(object2_name);
 
   std::unique_ptr<fcl::DynamicAABBTreeCollisionManagerd> manager1 =
       std::make_unique<fcl::DynamicAABBTreeCollisionManagerd>();
