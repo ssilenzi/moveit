@@ -333,9 +333,9 @@ void CollisionEnvFCL::checkObjectPairCollision(const CollisionRequest& req, Coll
   FCLObject fcl_obj1 = fcl_objs_.at(object1_name);
   FCLObject fcl_obj2 = fcl_objs_.at(object2_name);
 
-  std::unique_ptr<fcl::DynamicAABBTreeCollisionManagerd> manager1 =
+  std::unique_ptr<fcl::BroadPhaseCollisionManagerd> manager1 =
       std::make_unique<fcl::DynamicAABBTreeCollisionManagerd>();
-  std::unique_ptr<fcl::DynamicAABBTreeCollisionManagerd> manager2 =
+  std::unique_ptr<fcl::BroadPhaseCollisionManagerd> manager2 =
       std::make_unique<fcl::DynamicAABBTreeCollisionManagerd>();
 
   // Not sure if this is an optimized implementation. This could be possibly optimized, but it works.
